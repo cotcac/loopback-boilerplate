@@ -55,7 +55,10 @@
     "@loopback/repository": "^1.5.4",
     "@loopback/rest": "^1.11.1",
     "@loopback/rest-explorer": "^1.1.21",
-    "@loopback/service-proxy": "^1.1.9"
+    "@loopback/service-proxy": "^1.1.9",
+    "@types/dotenv": "^6.1.1",
+    "dotenv": "^8.0.0",
+    "loopback-connector-mysql": "^5.4.0"
   },
   "devDependencies": {
     "@loopback/build": "^1.5.3",

@@ -1,7 +1,7 @@
-import {GettingStartedApplication} from './application';
-import {ApplicationConfig} from '@loopback/core';
+import { GettingStartedApplication } from './application';
+import { ApplicationConfig } from '@loopback/core';
 
-export {GettingStartedApplication};
+export { GettingStartedApplication };
 
 export async function main(options: ApplicationConfig = {}) {
   const app = new GettingStartedApplication(options);
@@ -10,6 +10,8 @@ export async function main(options: ApplicationConfig = {}) {
 
   const url = app.restServer.url;
   console.log(`Server is running at ${url}`);
+  console.log(process.env.NODE_ENV, 'env');
+
   console.log(`Try ${url}/ping`);
 
   return app;

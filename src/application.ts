@@ -10,20 +10,27 @@ import { ServiceMixin } from '@loopback/service-proxy';
 import * as path from 'path';
 import { MySequence } from './sequence';
 import { DbDataSource } from './datasources/db.datasource'; // import DbDataSource
-
+import * as dotenv from 'dotenv';
 export class GettingStartedApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
   constructor(options: ApplicationConfig = {}) {
     super(options);
+    // Set up dotenv
+    dotenv.config({ path: '.env' });
 
     // PRODUCTION DATASOURCE
 
-    if (process.env.NODE_ENV === 'PRODUCTION') {
+    if (process.env.NODE_ENV === 'production') {
+      console.log('im in production', process.env.DB_HOST);
       const dbDataSource = new DbDataSource({
         name: 'db',
         connector: 'mysql',
-        url: process.env.DATABASE_URL
+        hostname: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE
       });
       this.bind('datasources.db').to(dbDataSource);
     }
