@@ -8,7 +8,7 @@ Run eslint.
 npm run -s eslint .
 ```
 # simple rules
-We use eslint best practice. link link[link](https://eslint.org/docs/rules/).
+We use eslint best practice. [link](https://eslint.org/docs/rules/).
 Beside all of the recommand we have some custome rules.
 - "no-multiple-empty-lines": "warn",
 - "no-var": "error",
