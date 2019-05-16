@@ -1,6 +1,6 @@
 # getting-started
 
-#Nodejs 10+
+# Nodejs 10+
 # Loopback 4
 ```
 npm install -g @loopback/cli
@@ -33,10 +33,21 @@ setting.json
 ```
 # Nodemon for run app and auto restart if change.
 ```
-nodemon index.js
+npm start
+//Test your code with mysql.
+NODE_ENV=production npm start
+
 ```
 [check your app](http://localhost:3000/)
 
 # Good news.
 Developer only need to focus on code. No need to care about database as we use LB in-memory db.
 
+# .env
+```
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=11111111
+DB_DATABASE=lb4
+```
