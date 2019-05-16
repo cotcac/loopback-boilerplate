@@ -16,6 +16,7 @@
     "build:watch": "lb-tsc --watch",
     "clean": "lb-clean dist",
     "lint": "npm run prettier:check && npm run tslint",
+    "eslint": "eslint --ext .js,.ts",
     "lint:fix": "npm run tslint:fix && npm run prettier:fix",
     "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
     "prettier:check": "npm run prettier:cli -- -l",
@@ -61,6 +62,9 @@
     "@loopback/testlab": "^1.2.8",
     "@loopback/tslint-config": "^2.0.4",
     "@types/node": "^10.11.2",
+    "@typescript-eslint/parser": "^1.9.0",
+    "eslint": "^5.16.0",
+    "pluggable-babel-eslint": "^0.3.0",
     "tslint": "^5.15.0",
     "typescript": "^3.4.3"
   }
