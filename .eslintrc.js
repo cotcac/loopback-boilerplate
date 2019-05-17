@@ -17,6 +17,8 @@ module.exports = {
   "rules": {
     "no-multiple-empty-lines": "warn",
     "no-var": "error",
-    "prefer-const": "error"
+    "prefer-const": "error",
+    "camelcase": "warn",
+    "no-duplicate-imports": "error"
   }
 }
