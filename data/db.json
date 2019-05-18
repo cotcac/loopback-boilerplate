@@ -1,6 +1,8 @@
 {
   "ids": {
-    "Heros": 17
+    "Heros": 17,
+    "Product": 3,
+    "Category": 2
   },
   "models": {
     "Heros": {
@@ -20,6 +22,13 @@
       "14": "{\"name\":\"supper man\",\"id\":14}",
       "15": "{\"name\":\"string\",\"id\":15}",
       "16": "{\"name\":\"string\",\"id\":16}"
+    },
+    "Product": {
+      "1": "{\"name\":\"string\",\"categoryId\":0,\"price\":0,\"id\":1}",
+      "2": "{\"name\":\"string\",\"categoryId\":1,\"price\":0,\"id\":2}"
+    },
+    "Category": {
+      "1": "{\"name\":\"string\",\"id\":1}"
     }
   }
 }
