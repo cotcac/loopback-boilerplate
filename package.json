@@ -25,6 +25,7 @@
     "tslint:fix": "npm run tslint -- --fix",
     "pretest": "npm run clean && npm run build",
     "test": "lb-mocha --allow-console-logs \"dist/__tests__\"",
+    "test1": "NODE_ENV=test mocha $(find test -name '*test.ts') --exit",
     "posttest": "npm run lint",
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
     "docker:build": "docker build -t getting-started .",
@@ -66,8 +67,12 @@
     "@loopback/tslint-config": "^2.0.4",
     "@types/node": "^10.11.2",
     "@typescript-eslint/parser": "^1.9.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "eslint": "^5.16.0",
+    "mocha": "^6.1.4",
     "pluggable-babel-eslint": "^0.3.0",
+    "should": "^13.2.3",
     "tslint": "^5.15.0",
     "typescript": "^3.4.3"
   }
