@@ -16,6 +16,7 @@
     "build:watch": "lb-tsc --watch",
     "clean": "lb-clean dist",
     "pretest": "npm run clean && npm run build",
+    "eslint": "eslint --ext .js,.ts",
     "test": "NODE_ENV=test lb-mocha --allow-console-logs \"dist/__tests__\"",
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js",
     "migrate": "NODE_ENV=production node ./dist/migrate",
@@ -46,6 +47,7 @@
     "@loopback/rest-explorer": "^1.1.22",
     "@loopback/service-proxy": "^1.1.10",
     "@types/dotenv": "^6.1.1",
+    "@typescript-eslint/parser": "^1.9.0",
     "dotenv": "^8.0.0",
     "loopback-connector-mysql": "^5.4.0"
   },
@@ -54,6 +56,7 @@
     "@loopback/testlab": "^1.2.9",
     "@loopback/tslint-config": "^2.0.4",
     "@types/node": "^10.11.2",
+    "eslint": "^5.16.0",
     "typescript": "^3.4.3"
   }
 }
