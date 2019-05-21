@@ -16,7 +16,7 @@ export class Product extends Entity {
   })
   name: string;
 
-  @belongsTo(() => Category, { keyTo: 'id' })
+  @belongsTo(() => Category)
   categoryId: number;
 
   @property({

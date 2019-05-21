@@ -1,8 +1,7 @@
 import { DefaultCrudRepository, HasManyRepositoryFactory, repository } from '@loopback/repository';
 import { Category, Product } from '../models';
 import { DbDataSource } from '../datasources';
-import { inject, Getter } from '@loopback/core';
-import { ProductRepository } from './product.repository';
+import { inject } from '@loopback/core';
 
 export class CategoryRepository extends DefaultCrudRepository<
   Category,
@@ -14,13 +13,7 @@ export class CategoryRepository extends DefaultCrudRepository<
   >;
   constructor(
     @inject('datasources.db') dataSource: DbDataSource,
-    @repository.getter('ProductRepository')
-    getProductRepository: Getter<ProductRepository>,
   ) {
     super(Category, dataSource);
-    this.product = this.createHasManyRepositoryFactoryFor(
-      'products',
-      getProductRepository,
-    );
   }
 }

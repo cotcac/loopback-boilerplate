@@ -21,7 +21,8 @@
     "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js",
     "migrate": "NODE_ENV=production node ./dist/migrate",
     "prestart": "npm run build",
-    "start": "node .",
+    "start": "NODE_ENV=production node .",
+    "deploy": "pm2 start pm2.json",
     "prepublishOnly": "npm run test"
   },
   "repository": {
@@ -49,7 +50,8 @@
     "@types/dotenv": "^6.1.1",
     "@typescript-eslint/parser": "^1.9.0",
     "dotenv": "^8.0.0",
-    "loopback-connector-mysql": "^5.4.0"
+    "loopback-connector-mysql": "^5.4.0",
+    "pm2": "^3.5.0"
   },
   "devDependencies": {
     "@loopback/build": "^1.5.4",

@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    container_name: docker-mysql-aaa
+    restart: always
+    build: .
+    ports:
+      - '3000:3000'
+    links:
+      - mysql
+    networks:
+      - site
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    ports:
+      - 3306:3306
+    networks:
+      - site
+
+networks:
+  site:
+volumes:
+    db_data:

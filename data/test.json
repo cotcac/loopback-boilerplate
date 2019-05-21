@@ -1,10 +1,12 @@
 {
   "ids": {
-    "Heros": 58
+    "Heros": 72,
+    "Category": 3
   },
   "models": {
     "Heros": {
-      "57": "{\"name\":\"supper man\",\"id\":57}"
-    }
+      "71": "{\"name\":\"supper man\",\"id\":71}"
+    },
+    "Category": {}
   }
 }
