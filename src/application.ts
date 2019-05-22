@@ -34,11 +34,11 @@ export class AppApplication extends BootMixin(
         "name": "prodDB",
         "connector": "mysql",
         "url": "",
-        "host": process.env.DB_HOST,
-        "port": process.env.DB_PORT,
-        "user": process.env.DB_USER,
-        "password": process.env.DB_PASSWORD,
-        "database": process.env.DB_DATABASE
+        "host": process.env.DATABASE_HOST,
+        "port": process.env.MYSQL_PORT,
+        "user": process.env.MYSQL_USER,
+        "password": process.env.MYSQL_PASSWORD,
+        "database": process.env.MYSQL_DATABASE
       });
       this.bind('datasources.config.db').to(updatedDatasourceDb);
     }
